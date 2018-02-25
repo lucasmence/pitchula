@@ -1,4 +1,4 @@
-# tcc2018
+# Interpretador de Texto para Pessoas com Deficiencia Visual ou Baixa Visão
 Repositorio destinado ao meu TCC, utilizando o RPI 3 B e Python como componentes principais. 
 
 
