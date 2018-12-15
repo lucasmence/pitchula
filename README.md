@@ -1,6 +1,6 @@
-# Interpretador de Texto para Pessoas com Deficiencia Visual ou Baixa Visão
-Repositorio destinado ao meu TCC, utilizando o RPI 3 B e Python como componentes principais. 
+# Pitchula photo reader
+Make the computer read automatically your printed documents only using the voice.
 
+More information soon...
 
-# Links Úteis
-Board de tarefas do projeto hospedado no trello: https://trello.com/b/v7rmMlxt/tcc-2018
+Last update: December, 14 of 2018.

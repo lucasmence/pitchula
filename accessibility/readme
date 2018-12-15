@@ -1,0 +1,72 @@
+DESCRICAO DE TODOS OS AUDIOS
+
+001 = bemvindo
+002 = botaoIniciar
+003 = modoDeCaptura
+004 = capturaDaFoto
+005 = inicioTratamentoDaFoto
+006 = primeiraParteConcluida
+007 = aperteDoisPontosReproduzir
+008 = aperteUmPontoFraseAnterior
+009 = aperteDoisPontosFraseAtual
+
+010 = aperteTresPontosProximaFrase
+011 = blocoTextoFinalizado
+012 = pressioneDoisPontosProximoBloco
+013 = pressioneQuatroPontosFinalizar
+014 = secaoFinalizada
+015 = blocoPronto
+016 = leituraPaginaConcluida
+017 = doisPontosProximaPagina
+018 = errosEscrita
+019 = erro
+
+020 = umPontoAjuda
+021 = ajuda1
+022 = ajuda2
+023 = botaoCaptura
+024 = botaoCancelar
+025 = botaoQuatroPontosVoltarMenuPrincipal
+
+030 = Fale em voz alta uma das opcoes a seguir
+031 = Ocorreu um problema no reconhecimento da sua voz. Vamos tentar novamente.
+032 = Primeira
+033 = Segunda
+034 = Terceira
+035 = Desculpe, mas tudo indica que estamos enfrentando problemas no reconhecimento da sua voz, vamos habilitar o teclado para que controle o sistema.
+036 = Com o modo de reconhecimento de voz ativado, iremos dar prioridade ao uso dela, caso a mesma apresente problemas, nós iremos liberar o uso do teclado.
+
+040 = Ajuda
+041 = Iniciar
+042 = Configurar
+043 = Sair
+044 = Repetir
+045 = Capturar
+046 = Cancelar
+047 = Ler
+048 = Anterior
+049 = Proximo
+
+060 = pressioneTresPontosParaConfigurarEquipamento
+061 = pressioneUmPontoParaAlterarLinguagem
+062 = testandoDispositivoDeCamera
+063 = finalizamosOTesteOresultadoE
+064 = dispositivoFuncionando
+065 = dispositivoComProblema
+066 = testandoDispositivoDeLed
+067 = muitoObrigadoPelaEspera
+068 = testandoReconhecimentoDeTexto
+069 = statusReconhecimentoDeTexto
+
+070 = funcionandoCorretamente
+071 = naoFuncionando
+072 = statusConexaoDaInternet
+073 = statusVerificadorOrtografico
+074 = pressioneDoisPontosParaTestarCamera
+075 = pressioneTresPontosParaTestarFrameworks
+076 = Pressione um ponto para alterar a linguagem e o reconhecimento de voz.
+077 = Pressione dois pontos para ativar o reconhecimento de voz.
+078 = Pressione tres pontos para desativar o reconhecimento de voz.
+079 = Configurações realizadas com êxito.
+
+099 = para escolher a linguagem 'x' pressione 'y'

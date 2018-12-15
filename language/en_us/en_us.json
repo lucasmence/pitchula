@@ -1,0 +1,17 @@
+{
+  "speech": {
+    "032": "first",	
+    "033": "second",
+    "034": "third",
+    "040": "help",
+    "041": "start",
+    "042": "configure",
+    "043": "exit",
+    "044": "repeat",
+    "045": "capture",
+    "046": "cancel",
+    "047": "read",
+    "048": "previous",
+    "049": "next"
+  }
+}
