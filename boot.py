@@ -1,3 +1,0 @@
-import core
-
-core.systemStart()

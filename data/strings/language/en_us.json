@@ -1,0 +1,14 @@
+{
+  "errorPath" : "The file doesn't exist or can't be accessed!",
+  "errorLibraries" : "One or more libraries are missing, checkout our website to see more about it.",
+  "errorOcr" : "No text found! Aborted!",
+  "errorFiletype" : "Invalid filetype, checkout our website to see more about filetypes!",
+  "messageWelcome" : "Welcome! Wait a while unitl we check our depedencies!",
+  "messageDepenciesOk" : "We've nothing to do here, it's everything okay!",
+  "messageImage" : "Image under treatment;",
+  "messageOcr" : "Running the OCR process;",
+  "messageSpellcheck" : "Text through the spellchecking;",
+  "messageAudio" : "Generating audio;",
+  "messagePlay" : "Playing audio;",
+  "messageFinish" : "All done! Returning to my home!"
+}
