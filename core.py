@@ -1,5 +1,7 @@
-#coding: utf-8
+#!/usr/bin/env python
+# coding: utf-8
 
+import constants
 import functions
 import image
 import jsonLib
@@ -11,52 +13,55 @@ import tts
 
 reload(sys)   
                 
-def systemStart():
+def run():
 
-    variables = "data/strings/variables.json"
-    sys.setdefaultencoding(jsonLib.getValue(variables,"textType"))
-    languageType = jsonLib.getValue(variables,"languageCurrent")
-    languagePath = jsonLib.getValue(variables,"languagePath")+languageType+".json"
+    variables = constants.PATH_VARIABLES
+    textType = jsonLib.getValue(variables,constants.FIELD_TEXT_TYPE)
+    textTypeCodecs = jsonLib.getValue(variables,constants.FIELD_TEXT_TYPE_CODECS)
+    sys.setdefaultencoding(textType)
+    languageType = jsonLib.getValue(variables,constants.FIELD_LANGUAGE_CURRENT)
+    languagePath = jsonLib.getValue(variables,constants.PATH_LANGUAGE)+languageType+constants.EXTENSION_JSON
 
-    if (len(sys.argv) <= 2):
-        print(jsonLib.getValue(languagePath,"errorParameters"))
-        return 1    
+    if (len(sys.argv) <= constants.MINIMUM_ARGUMENTS):
+        print(jsonLib.getValue(languagePath,constants.FIELD_ERROR_PARAMETERS))
+        return constants.INDEX_RETURN_ERROR    
 
-    pathImage = sys.argv[1]
-    pathAudio = sys.argv[2]
-    extension = os.path.splitext(pathImage)[1][1:]
+    pathImage = sys.argv[constants.INDEX_ARGUMENT_IMAGE]
+    pathAudio = sys.argv[constants.INDEX_ARGUMENT_AUDIO]
+    extension = os.path.splitext(pathImage)[constants.INDEX_POSITION_EXTENSION][constants.INDEX_POSITION_SPLIT_ORDER:]
 
     if not (os.path.isfile(pathImage)):
-        print(jsonLib.getValue(languagePath,"errorInput"))
-        return 1        
-    if (not (os.path.dirname(pathAudio))) and (os.path.dirname(pathAudio) != ""):
-        print(jsonLib.getValue(languagePath,"errorOutput"))
-        return 1
-    if not (extension in jsonLib.getValue(variables,"imageExtension")):
-        print(jsonLib.getValue(languagePath,"errorFiletype"))
-        return 1    
+        print(jsonLib.getValue(languagePath,constants.FIELD_ERROR_INPUT))
+        return constants.INDEX_RETURN_ERROR        
+    if (not (os.path.dirname(pathAudio))) and (os.path.dirname(pathAudio) != constants.FIELD_EMPTY_STRING):
+        print(jsonLib.getValue(languagePath,constants.FIELD_ERROR_OUTPUT))
+        return constants.INDEX_RETURN_ERROR
+    if not (extension in jsonLib.getValue(variables,constants.FIELD_IMAGE_EXTENSION)):
+        print(jsonLib.getValue(languagePath,constants.FIELD_ERROR_FILE_TYPE))
+        return constants.INDEX_RETURN_ERROR    
 
-    print(jsonLib.getValue(languagePath,"messageWelcome")) 
-    functions.clearAll(variables)
+    print(jsonLib.getValue(languagePath,constants.FIELD_MESSAGE_WELCOME)) 
 
-    internalImage = jsonLib.getValue(variables,"imagePath")+"/"+jsonLib.getValue(variables,"imageFilename")+"."+jsonLib.getValue(variables,"imageExtensionDefault")
-    internalText = jsonLib.getValue(variables,"textPath")+"/"+jsonLib.getValue(variables,"textFilename")+"."+jsonLib.getValue(variables,"textExtension")
+    internalImage = jsonLib.getValue(variables,constants.FIELD_IMAGE_FILENAME)
+    internalText = jsonLib.getValue(variables,constants.FIELD_TEXT_FILENAME)
     
     image.fixImage(pathImage,internalImage)
 
-    ocr.readPhoto(internalImage,internalText)
+    ocr.readPhoto(internalImage,internalText,textTypeCodecs)
 
-    spellcheck.verifyFile(internalText,languageType)
+    spellcheck.verifyFile(internalText,languageType,textType,textTypeCodecs)
 
-    ttsLanguage = jsonLib.getValue(languagePath,"gTTSCode")
+    ttsLanguage = jsonLib.getValue(languagePath,constants.FIELD_GTTS_CODE)
     audioExists = tts.convertText(internalText,pathAudio,ttsLanguage)
 
-    if (audioExists == 0):
-        print(jsonLib.getValue(languagePath,"messageFinish"))
+    if (audioExists == constants.INDEX_RETURN_OK):
+        print(jsonLib.getValue(languagePath,constants.FIELD_MESSAGE_FINISH))
     
-    return 0
+    functions.clearAll(internalImage,internalText)
+    
+    return constants.INDEX_RETURN_OK
             
-systemStart()
+run()
             
     
 
