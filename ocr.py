@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import constants
 from PIL import Image 
 import pytesseract 
 import os 
 import codecs   
-import jsonLib 
 
-def readPhoto(filename, filetext):
+def readPhoto(filename, filetext, textTypeCodecs):
     fileInput = filename
 
     ocrText = pytesseract.image_to_string(Image.open(fileInput))  
@@ -16,8 +16,8 @@ def readPhoto(filename, filetext):
     if (os.path.isfile(fileOutput)):
         os.remove(fileOutput)
     
-    os.system("touch "+fileOutput)  
-    fileOutputText = codecs.open(fileOutput,"w","utf-8")
-    fileOutputText.write(u"\ufeff"+ocrText.lower())
+    os.system(constants.COMMAND_CREATE_FILE+fileOutput)  
+    fileOutputText = codecs.open(fileOutput,constants.COMMAND_WRITE_MODE,textTypeCodecs)
+    fileOutputText.write(constants.COMMAND_WRITE_FILE+ocrText.lower())
     fileOutputText.close()  
     
