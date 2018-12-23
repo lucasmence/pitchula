@@ -5,22 +5,12 @@
     "author" : "lucasmence",
     "email" : "mencethedeveloper@gmail.com",
 
-    "imagePath" : "image",
-    "imageFilename" : "photo",
+    "imageFilename" : "photo.png",
     "imageExtension" : ["png", "jpg"],
-    "imageExtensionDefault" : "png",
-    "imageFiletype" : "image",
     
     "textType" : "utf8",  
-    "textPath" : "text/",
-    "textFilename" : "data",
-    "textExtension" : "txt",
-    "textFiletype" : "text",
-    
-    "audioPath" : "audio/",
-    "auditoFilename" : "sound",
-    "audioExtension" : ".mp3",
-    "audioFiletype" : "audio",
+    "textTypeCodecs" : "utf-8",
+    "textFilename" : "data.txt",
 
     "languagePath" : "data/strings/language/",
     "languageCurrent" : "en_US",
