@@ -6,7 +6,7 @@ Convert any image-text into audio with a single command line.
 # How to install
 
 - Clone the project directory using **git clone** command:
-> git clone https://github.com/reversewatermelon/pitchula
+> git clone https://github.com/reversewatermelon/pitchula-photoreader
 
 - Install the **OpenCV** library for python using the command below:
 > pip install opencv-python
