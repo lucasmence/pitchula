@@ -1,18 +1,41 @@
-# ![ ](./data/image/eye.png) **Pitchula photoreader**
+# ![ ](./data/image/eye.png) **pitchula photoreader**
 
+Convert any image-text into audio with a single command line.
+> python run.py input.jpg output.mp3
 
-Make the computer read automatically your printed documents only using the voice.
+# How to install
 
-# About the project
+- Clone the project directory using **git clone** command:
+> git clone https://github.com/reversewatermelon/pitchula
 
-![](https://github.com/reversewatermelon/pitchula/blob/master/data/image/reversewatermelonicon.png)
-==> A project brought to you by Reverse Watermelon studio!
+- Install the **OpenCV** library for python using the command below:
+> pip install opencv-python
 
-# Description
+- Install the **Pillow** library using the command below:
+> pip install Pillow
 
-More information coming soon...
+- Install the **python-setuptools** using the command below:
+>  sudo apt install python-setuptools
 
-Last update: December, 14 of 2018.
+- Install the **Tesseract-OCR** libraries to continue, just copy the commands below:
+> sudo apt install tesseract-ocr
+
+> sudo apt install libtesseract-dev
+
+- Install the **Tesseract for python** library using the command below:
+> pip install pytesseract
+
+- Install the spellcheck library, **pyenchant**, just use the command below:
+> pip install pyenchant
+
+- Install the text-to-speech API library the **gTTS** by using the command below:
+> pip install gTTS
+
+Okay, now you're ready to use this tool!
 
 # Credits
 <div>Project logo icon made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+#
+
+> Last update: December, 23 of 2018.
