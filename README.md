@@ -1,4 +1,4 @@
-# ![ ](./data/image/eye.png) **pitchula photoreader**
+# ![ ](./data/image/logo-eye-32-32.png) **pitchula photoreader**
 
 Convert any image-text into audio with a single command line.
 > python run.py input.jpg output.mp3
