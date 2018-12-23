@@ -1,52 +1,53 @@
-# -*- coding: utf-8 -*-
-# encoding=utf8  
+#!/usr/bin/env python
+# coding: utf-8
 
+import constants
 import enchant
 import os
 import codecs
 import sys
 import re as refactoring
     
-def verifyFile(filename, language):
+def verifyFile(filename, language, textType, textTypeCodecs):
 
     reload(sys)  
-    sys.setdefaultencoding("utf8")
+    sys.setdefaultencoding(textType)
     fileInput = filename
-    fileText = ""
+    fileText = constants.FIELD_EMPTY_STRING
 
-    for listItem in open(fileInput,"r").read().splitlines():   
-        fileText = fileText+" "+listItem
+    for listItem in open(fileInput,constants.COMMAND_READ_MODE).read().splitlines():   
+        fileText = fileText+constants.FIELD_SPACE+listItem
     
-    if ((fileText == None) or (len(fileText.strip()) < 4)):
-        return 1
+    if ((fileText == None) or (len(fileText.strip()) < constants.MINIMUM_TEXT_SIZE)):
+        return constants.INDEX_RETURN_ERROR
     
     fileOutput = filename  
-    textOutput = ""
+    textOutput = constants.FIELD_EMPTY_STRING
     wordlist = fileText.split()      
     dictionary = enchant.Dict(language)
         
     for word in wordlist:
     
-        word = refactoring.sub(r'[^\w\s]',"",word.strip())
+        word = refactoring.sub(constants.COMMAND_FIX_CHARACTERS,constants.FIELD_EMPTY_STRING,word.strip())
         oldWord = word
-        if (len(word) > 2):          
+        if (len(word) > constants.MINIMUM_WORD_SIZE):          
             if (dictionary.check(word) == False):
                 fixedWordlist = dictionary.suggest(word)
-                if (len(fixedWordlist) > 0):
-                    word = fixedWordlist[0]
+                if (len(fixedWordlist) > constants.MINIMUM_WORD_NEW_SIZE):
+                    word = fixedWordlist[constants.INDEX_RECOMMENDED_WORD]
         
         newWord = oldWord 
         if (oldWord != word):
             newWord = word    
         
-        textOutput = textOutput + newWord + " "
+        textOutput = textOutput + newWord + constants.FIELD_SPACE
     
     if (os.path.isfile(fileOutput)):
         os.remove(fileOutput)
         
-    os.system("touch "+fileOutput)
-    fileOutputText = codecs.open(fileOutput,"w","utf-8")
-    fileOutputText.write(u"\ufeff"+textOutput)
+    os.system(constants.COMMAND_CREATE_FILE+fileOutput)
+    fileOutputText = codecs.open(fileOutput,constants.COMMAND_WRITE_MODE,textTypeCodecs)
+    fileOutputText.write(constants.COMMAND_WRITE_FILE+textOutput)
     fileOutputText.close()  
 
-    return 0
+    return constants.INDEX_RETURN_OK
