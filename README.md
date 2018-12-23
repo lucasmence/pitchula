@@ -33,6 +33,12 @@ Convert any image-text into audio with a single command line.
 
 Okay, now you're ready to use this tool!
 
+# Extensions
+
+Input image types suported: **JPG** and **PNG**
+
+Output audio type suported: **MP3**
+
 # Credits
 
 **OpenCV for Python library** -> https://github.com/skvark/opencv-python
