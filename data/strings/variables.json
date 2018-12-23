@@ -7,13 +7,14 @@
 
     "imagePath" : "image",
     "imageFilename" : "photo",
-    "imageExtension" : [".jpg", ".png"],
+    "imageExtension" : ["png", "jpg"],
+    "imageExtensionDefault" : "png",
     "imageFiletype" : "image",
     
     "textType" : "utf8",  
     "textPath" : "text/",
     "textFilename" : "data",
-    "textExtension" : ".txt",
+    "textExtension" : "txt",
     "textFiletype" : "text",
     
     "audioPath" : "audio/",
