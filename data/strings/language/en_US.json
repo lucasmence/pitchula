@@ -1,6 +1,6 @@
 {
   "errorInput" : "The file doesn't exist or can't be accessed!",
-  "errorParameters" : "python core.py <input image file path> <output audio file path>",
+  "errorParameters" : "python run.py <input image file path> <output audio file path>",
   "errorOutput" : "The directory from audio output file doesn't exist or cannot be accessed!",
   "errorFiletype" : "Invalid filetype, checkout our website to see more about filetypes!",
   "messageWelcome" : "Generating the audio file...",
