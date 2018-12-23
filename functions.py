@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import constants
 import os
-import jsonLib
         
-def clearAll(pathVariables):
-    imagePath = jsonLib.getValue(pathVariables,"imagePath")+"/"+jsonLib.getValue(pathVariables,"imageFilename")+"."+jsonLib.getValue(pathVariables,"imageExtensionDefault")
-    textPath = jsonLib.getValue(pathVariables,"textPath")+"/"+jsonLib.getValue(pathVariables,"textFilename")+"."+jsonLib.getValue(pathVariables,"textExtension")
-
+def clearAll(imagePath, textPath):
     if (os.path.isfile(imagePath)):
         os.remove(imagePath)
 
     if (os.path.isfile(textPath)):
         os.remove(textPath)
     
-    return 0
+    return constants.INDEX_RETURN_OK
