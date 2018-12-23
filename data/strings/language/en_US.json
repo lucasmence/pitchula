@@ -6,5 +6,6 @@
   "errorOcr" : "No text found! Aborted!",
   "errorFiletype" : "Invalid filetype, checkout our website to see more about filetypes!",
   "messageWelcome" : "Generating the audio file...",
-  "messageFinish" : "All done! Returning to my home!"
+  "messageFinish" : "All done! Returning home!",
+  "gTTSCode" : "en"
 }

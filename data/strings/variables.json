@@ -23,7 +23,7 @@
     "audioFiletype" : "audio",
 
     "languagePath" : "data/strings/language/",
-    "languageCurrent" : "en_us",
+    "languageCurrent" : "en_US",
 
     "stringsPath" : "data/strings/"
     

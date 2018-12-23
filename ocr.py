@@ -7,12 +7,12 @@ import os
 import codecs   
 import jsonLib 
 
-def readPhoto(filename, pathVariables):
+def readPhoto(filename, filetext):
     fileInput = filename
 
     ocrText = pytesseract.image_to_string(Image.open(fileInput))  
 
-    fileOutput = jsonLib.getValue(pathVariables,"textPath")+"/"+jsonLib.getValue(pathVariables,"textFilename")+"."+jsonLib.getValue(pathVariables,"textExtension")
+    fileOutput = filetext
     if (os.path.isfile(fileOutput)):
         os.remove(fileOutput)
     

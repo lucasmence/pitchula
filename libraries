@@ -1,12 +1,18 @@
 cv2 - opencv
 opencv-python
 pip install opencv-python
+
 PIL
 pip install Pillow
-sudo apt-get install python-setuptools
 
+sudo apt-get install python-setuptools
 sudo apt update
 sudo apt install tesseract-ocr
 sudo apt install libtesseract-dev
-
 pip install pytesseract
+
+enchant
+pip install pyenchant
+
+gTTS
+pip install gTTS
