@@ -16,7 +16,7 @@ However, feel free to add another ones!
 # How to install
 
 - Clone the project directory using **git clone** command:
-> git clone https://github.com/reversewatermelon/pitchula-photoreader
+> git clone https://github.com/lucasmence/pitchula-photoreader/
 
 - Install the **OpenCV** library for python using the command below:
 > pip install opencv-python
@@ -73,4 +73,4 @@ Output audio type suported: **MP3**
 
 #
 
-> Last update: December, 23 of 2018.
+> Last update: December, 24 of 2018.
