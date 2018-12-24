@@ -35,7 +35,9 @@ However, feel free to add another ones!
 - Install the **Tesseract for python** library using the command below:
 > pip install pytesseract
 
-- Install the spellcheck library, **pyenchant**, just use the command below:
+- Install the spellcheck libraries, **enchant** and **pyenchant**, just use the commands below:
+> sudo apt install enchant
+
 > pip install pyenchant
 
 - Install the text-to-speech API library the **gTTS** by using the command below:
