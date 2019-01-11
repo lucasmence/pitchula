@@ -10,8 +10,6 @@ import os
 import spellcheck
 import sys
 import tts
-
-reload(sys)   
                 
 def run():
 
