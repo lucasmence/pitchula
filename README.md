@@ -1,4 +1,4 @@
-![ ](https://scrutinizer-ci.com/g/lucasmence/pitchula-photoreader/badges/quality-score.png?b=master) ![ ](https://scrutinizer-ci.com/g/lucasmence/pitchula-photoreader/badges/build.png?b=master)
+[![Code Quality](https://scrutinizer-ci.com/g/lucasmence/pitchula-photoreader/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/lucasmence/pitchula-photoreader/?branch=master) ![ ](https://scrutinizer-ci.com/g/lucasmence/pitchula-photoreader/badges/build.png?b=master)
 
 # ![ ](./data/image/logo-eye-32-32.png) **pitchula photoreader**
 
