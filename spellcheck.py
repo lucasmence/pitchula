@@ -9,8 +9,7 @@ import sys
 import re as refactoring
     
 def verifyFile(filename, language, textType, textTypeCodecs):
-
-    reload(sys)  
+ 
     sys.setdefaultencoding(textType)
     fileInput = filename
     fileText = constants.FIELD_EMPTY_STRING
