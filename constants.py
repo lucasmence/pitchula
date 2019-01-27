@@ -1,83 +1,84 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-VALUE_IMAGE_PERCENT_GAMMA_CORRECTION = 30
+class Constants():
+    
+    def __init__(self):
+        self._VALUE_IMAGE_PERCENT_GAMMA_CORRECTION = 30
 
-VALUE_IMAGE_BLACK_WHITE_DIVISION = 128
+        self._VALUE_IMAGE_BLACK_WHITE_DIVISION = 128
 
-VALUE_IMAGE_BLACK_WHITE_UPDATE = 127
+        self._VALUE_IMAGE_BLACK_WHITE_UPDATE = 127
 
-VALUE_IMAGE_COLORS = 255
+        self._VALUE_IMAGE_COLORS = 255
 
-VALUE_IMAGE_BINARY_GET = 1
+        self._VALUE_IMAGE_BINARY_GET = 1
 
-MINIMUM_ARGUMENTS = 2
+        self._MINIMUM_ARGUMENTS = 2
 
-MINIMUM_TEXT_SIZE = 4
+        self._MINIMUM_TEXT_SIZE = 4
 
-MINIMUM_WORD_SIZE = 2
+        self._MINIMUM_WORD_SIZE = 2
 
-MINIMUM_WORD_NEW_SIZE = 0
+        self._MINIMUM_WORD_NEW_SIZE = 0
 
-INDEX_RECOMMENDED_WORD = 0
+        self._INDEX_RECOMMENDED_WORD = 0
 
-INDEX_RETURN_OK = 0
+        self._INDEX_RETURN_OK = 0
 
-INDEX_RETURN_ERROR = 1
+        self._INDEX_RETURN_ERROR = 1
 
-INDEX_ARGUMENT_IMAGE = 1
+        self._INDEX_POSITION_EXTENSION = 1
 
-INDEX_ARGUMENT_AUDIO = 2
+        self._INDEX_POSITION_SPLIT_ORDER = 1
 
-INDEX_POSITION_EXTENSION = 1
+        self._COMMAND_READ_MODE = "r"
 
-INDEX_POSITION_SPLIT_ORDER = 1
+        self._COMMAND_WRITE_MODE = "w"
 
-COMMAND_READ_MODE = "r"
+        self._COMMAND_FIX_CHARACTERS = r'[^\w\s]'
 
-COMMAND_WRITE_MODE = "w"
+        self._COMMAND_WRITE_FILE = u"\ufeff"
 
-COMMAND_FIX_CHARACTERS = r'[^\w\s]'
+        self._COMMAND_CREATE_FILE = "touch "
 
-COMMAND_WRITE_FILE = u"\ufeff"
+        self._PATH_VARIABLES = "data/strings/variables.json"
 
-COMMAND_CREATE_FILE = "touch "
+        self._PATH_LANGUAGE = "languagePath"
 
-PATH_VARIABLES = "data/strings/variables.json"
+        self._FIELD_EMPTY_STRING = ""
 
-PATH_LANGUAGE = "languagePath"
+        self._FIELD_SPACE = " "
 
-FIELD_EMPTY_STRING = ""
+        self._FIELD_TEXT_TYPE = "textType"
 
-FIELD_SPACE = " "
+        self._FIELD_TEXT_TYPE_CODECS = "textTypeCodecs"
 
-FIELD_TEXT_TYPE = "textType"
+        self._FIELD_LANGUAGE_CURRENT = "languageCurrent"
 
-FIELD_TEXT_TYPE_CODECS = "textTypeCodecs"
+        self._FIELD_ERROR_PARAMETERS = "errorParameters"
 
-FIELD_LANGUAGE_CURRENT = "languageCurrent"
+        self._FIELD_ERROR_INPUT = "errorInput"
 
-FIELD_ERROR_PARAMETERS = "errorParameters"
+        self._FIELD_ERROR_OUTPUT = "errorOutput"
 
-FIELD_ERROR_INPUT = "errorInput"
+        self._FIELD_ERROR_FILE_TYPE = "errorFiletype"
 
-FIELD_ERROR_OUTPUT = "errorOutput"
+        self._FIELD_IMAGE_EXTENSION = "imageExtension"
 
-FIELD_ERROR_FILE_TYPE = "errorFiletype"
+        self._FIELD_MESSAGE_WELCOME = "messageWelcome"
 
-FIELD_IMAGE_EXTENSION = "imageExtension"
+        self._FIELD_MESSAGE_FINISH = "messageFinish"
 
-FIELD_MESSAGE_WELCOME = "messageWelcome"
+        self._FIELD_IMAGE_FILENAME = "imageFilename"
 
-FIELD_MESSAGE_FINISH = "messageFinish"
+        self._FIELD_TEXT_FILENAME = "textFilename"
 
-FIELD_IMAGE_FILENAME = "imageFilename"
+        self._FIELD_GTTS_CODE = "gTTSCode"
 
-FIELD_TEXT_FILENAME = "textFilename"
+        self._EXTENSION_JSON = ".json"
 
-FIELD_GTTS_CODE = "gTTSCode"
 
-EXTENSION_JSON = ".json"
 
 
 

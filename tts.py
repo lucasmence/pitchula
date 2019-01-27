@@ -1,24 +1,28 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import constants
 from gtts import gTTS
 import os
 
-def convertText(filename, output, language):
-    
-    fileInput = filename
-    fileText = constants.FIELD_EMPTY_STRING
+class Tts():
 
-    for listItem in open(fileInput,constants.COMMAND_READ_MODE).read().splitlines():   
-        fileText = fileText+constants.FIELD_SPACE+listItem
+    def __init__(self, constants):
+        self._constants = constants
+
+    def convertText(self, filename, output, language):
         
-    if ((fileText == None) or (len(fileText.strip()) < constants.MINIMUM_TEXT_SIZE)):
-        return constants.INDEX_RETURN_ERROR
+        fileInput = filename
+        fileText = self._constants._FIELD_EMPTY_STRING
 
-    fileOutput = output
-    tts = gTTS(text=fileText, lang=language) 
-    tts.save(fileOutput)
+        for listItem in open(fileInput,self._constants._COMMAND_READ_MODE).read().splitlines():   
+            fileText = fileText+self._constants._FIELD_SPACE+listItem
+            
+        if ((fileText == None) or (len(fileText.strip()) < self._constants._MINIMUM_TEXT_SIZE)):
+            return self._constants._INDEX_RETURN_ERROR
 
-    return constants.INDEX_RETURN_OK
+        fileOutput = output
+        tts = gTTS(text=fileText, lang=language) 
+        tts.save(fileOutput)
+
+        return self._constants._INDEX_RETURN_OK
 
