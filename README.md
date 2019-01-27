@@ -75,10 +75,15 @@ Output audio type suported: **MP3**
 # version-log
  
  01/27/2019: Released the version 1.0.1
+
     > Removed unused lines;
+
     > Updated all the project files to use OOP;
+
     > Replaced the run.py file to pitchula.py to test the project;
+
     > Use the Reader class on reader.py file to use the project functions inside of your own project;
+    
 
  12/23/2018: Released the version 1.0.0
 
