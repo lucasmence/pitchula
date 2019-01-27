@@ -1,6 +1,6 @@
 {
   "errorInput" : "¡El archivo no existe o no se puede acceder!",
-  "errorParameters" : "python run.py <ruta del archivo de imagen de entrada> <ruta del archivo de audio de salida>",
+  "errorParameters" : "Los campos <ruta del archivo de imagen de entrada> y <ruta del archivo de audio de salida> no pueden quedar en blanco.",
   "errorOutput" : "¡El directorio del archivo de salida de audio no existe o no se puede acceder!",
   "errorFiletype" : "Tipo de archivo no valido, visite nuestro sitio web para ver mas sobre los tipos de archivo! https://reversewatermelon.github.io/pitchula-photoreader/",
   "messageWelcome" : "Generando el archivo de audio...",
