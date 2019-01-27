@@ -89,4 +89,4 @@ Output audio type suported: **MP3**
 
 #
 
-> Last update: December, 24 of 2018.
+> Last update: January, 27 of 2019.
