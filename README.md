@@ -2,10 +2,10 @@
 
 # ![ ](./data/image/logo-eye-32-32.png) **pitchula photoreader**
 
-Current version: **1.0.0**
+Current version: **1.0.1**
 
 Convert any image-text into audio with a single command line, e. g.: 
-> python run.py input.jpg output.mp3
+> python pitchula.py input.jpg output.mp3
 
 # Languages
 
@@ -73,6 +73,13 @@ Output audio type suported: **MP3**
 <div>Project logo icon and country flags made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 # version-log
+ 
+ 01/27/2019: Released the version 1.0.1
+    > Removed unused lines;
+    > Updated all the project files to use OOP;
+    > Replaced the run.py file to pitchula.py to test the project;
+    > Use the Reader class on reader.py file to use the project functions inside of your own project;
+
  12/23/2018: Released the version 1.0.0
 
 #
