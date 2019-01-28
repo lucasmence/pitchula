@@ -2,7 +2,7 @@
 
 # ![ ](./data/image/logo-eye-32-32.png) **pitchula photoreader**
 
-Current version: **1.0.1**
+Current version: **1.0.2**
 
 Convert any image-text into audio with a single command line, e. g.: 
 > python pitchula.py input.jpg output.mp3
