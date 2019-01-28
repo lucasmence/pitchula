@@ -2,7 +2,7 @@
   "errorInput" : "O arquivo nao existe ou nao pode ser acessado!",
   "errorParameters" : "Os campos <caminho da imagem de entrada> e <caminho do audio de saida> nao podem ficar em branco.",
   "errorOutput" : "O diretorio do audio de saida nao existe ou nao pode ser acessado!",
-  "errorFiletype" : "Tipo de arquivo invalido, acesso o nosso site para mais informacoes! https://reversewatermelon.github.io/pitchula-photoreader/",
+  "errorFiletype" : "Tipo de arquivo invalido, acesso o nosso site para mais informacoes! https://lucasmence.github.io/pitchula-photoreader/",
   "messageWelcome" : "Gerando o arquivo de audio...",
   "messageFinish" : "Tudo concluido! Retornando para a casa!",
   "gTTSCode" : "pt"

@@ -2,7 +2,7 @@
   "errorInput" : "The file doesn't exist or can't be accessed!",
   "errorParameters" : "The <input image file path> and <output audio file path> cannot be empty.",
   "errorOutput" : "The directory from audio output file doesn't exist or cannot be accessed!",
-  "errorFiletype" : "Invalid filetype, checkout our website to see more about filetypes! https://reversewatermelon.github.io/pitchula-photoreader/",
+  "errorFiletype" : "Invalid filetype, checkout our website to see more about filetypes! https://lucasmence.github.io/pitchula-photoreader/",
   "messageWelcome" : "Generating the audio file...",
   "messageFinish" : "All done! Returning home!",
   "gTTSCode" : "en"

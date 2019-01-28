@@ -74,6 +74,15 @@ Output audio type suported: **MP3**
 
 # version-log
  
+ 01/28/2019: Released the version 1.0.2
+
+    > Object instance otimization for a better performance;
+
+    > Fixed languagePath definition bug;
+
+    > Updated the languages JSON files w/ new repository environment;
+    
+
  01/27/2019: Released the version 1.0.1
 
     > Removed unused lines;
@@ -89,4 +98,4 @@ Output audio type suported: **MP3**
 
 #
 
-> Last update: January, 27 of 2019.
+> Last update: January, 28 of 2019.

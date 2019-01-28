@@ -2,7 +2,7 @@
   "errorInput" : "Le fichier n'existe pas ou n'est pas accessible!",
   "errorParameters" : "Les champs <chemin du fichier image d'entree> et <chemin du fichier audio de sortie> ne doivent pas être vides.",
   "errorOutput" : "Le repertoire du fichier de sortie audio n'existe pas ou est inaccessible!",
-  "errorFiletype" : "Type de fichier invalide, consultez notre site Web pour en savoir plus sur les types de fichier! https://reversewatermelon.github.io/pitchula-photoreader/",
+  "errorFiletype" : "Type de fichier invalide, consultez notre site Web pour en savoir plus sur les types de fichier! https://lucasmence.github.io/pitchula-photoreader/",
   "messageWelcome" : "Generer le fichier audio...",
   "messageFinish" : "Tout est fait! Retour a la maison!",
   "gTTSCode" : "fr"

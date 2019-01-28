@@ -14,73 +14,77 @@ import tts
 class Reader():
     
     def __init__(self):
-        self._constants = constants.Constants()
-        self._functions = functions.Functions(self._constants)
-        self._image = image.Image(self._constants)
-        self._jsonLib = jsonLib.JsonLib(self._constants)
-        self._ocr = ocr.Ocr(self._constants)
-        self._spellcheck = spellcheck.Spellcheck(self._constants)
-        self._tts = tts.Tts(self._constants)
-
-        
+        self._constants = constants.Constants()    
 
     def start(self,inputFile, outputFile):
-        
-        if (inputFile == self._constants._FIELD_EMPTY_STRING or outputFile == self._constants._FIELD_EMPTY_STRING):
-            print(self._jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_PARAMETERS))
-            return self._constants._INDEX_RETURN_ERROR    
 
-        pathImage = inputFile
-        pathAudio = outputFile
+        _jsonLib = jsonLib.JsonLib(self._constants)   
 
         variables = self._constants._PATH_VARIABLES
-        textType = self._jsonLib.getValue(variables,self._constants._FIELD_TEXT_TYPE)
-        textTypeCodecs = self._jsonLib.getValue(variables,self._constants._FIELD_TEXT_TYPE_CODECS)
-        languageType = self._jsonLib.getValue(variables,self._constants._FIELD_LANGUAGE_CURRENT)
-        languagePath = self._jsonLib.getValue(variables,self._constants._PATH_LANGUAGE)+languageType+self._constants._EXTENSION_JSON
-    
-        extension = os.path.splitext(pathImage)[self._constants._INDEX_POSITION_EXTENSION][self._constants._INDEX_POSITION_SPLIT_ORDER:]
+        textType = _jsonLib.getValue(variables,self._constants._FIELD_TEXT_TYPE)
+        textTypeCodecs = _jsonLib.getValue(variables,self._constants._FIELD_TEXT_TYPE_CODECS)
+        languageType = _jsonLib.getValue(variables,self._constants._FIELD_LANGUAGE_CURRENT)
+        languagePath = _jsonLib.getValue(variables,self._constants._PATH_LANGUAGE)+languageType+self._constants._EXTENSION_JSON 
+        extension = os.path.splitext(inputFile)[self._constants._INDEX_POSITION_EXTENSION][self._constants._INDEX_POSITION_SPLIT_ORDER:]
 
-        if not (os.path.isfile(pathImage)):
-            print(self._jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_INPUT))
+        if (inputFile == self._constants._FIELD_EMPTY_STRING or outputFile == self._constants._FIELD_EMPTY_STRING):
+            print(_jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_PARAMETERS))
+            return self._constants._INDEX_RETURN_ERROR 
+
+        if not (os.path.isfile(inputFile)):
+            print(_jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_INPUT))
             return self._constants._INDEX_RETURN_ERROR        
-        if (not (os.path.dirname(pathAudio))) and (os.path.dirname(pathAudio) != self._constants._FIELD_EMPTY_STRING):
-            print(self._jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_OUTPUT))
+        if (not (os.path.dirname(outputFile))) and (os.path.dirname(outputFile) != self._constants._FIELD_EMPTY_STRING):
+            print(_jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_OUTPUT))
             return self._constants._INDEX_RETURN_ERROR
-        if not (extension in self._jsonLib.getValue(variables,self._constants._FIELD_IMAGE_EXTENSION)):
-            print(self._jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_FILE_TYPE))
+        if not (extension in _jsonLib.getValue(variables,self._constants._FIELD_IMAGE_EXTENSION)):
+            print(_jsonLib.getValue(languagePath,self._constants._FIELD_ERROR_FILE_TYPE))
             return self._constants._INDEX_RETURN_ERROR    
 
-        print(self._jsonLib.getValue(languagePath,self._constants._FIELD_MESSAGE_WELCOME)) 
+        print(_jsonLib.getValue(languagePath,self._constants._FIELD_MESSAGE_WELCOME)) 
 
-        internalImage = self._jsonLib.getValue(variables,self._constants._FIELD_IMAGE_FILENAME)
-        internalText = self._jsonLib.getValue(variables,self._constants._FIELD_TEXT_FILENAME)
+        internalImage = _jsonLib.getValue(variables,self._constants._FIELD_IMAGE_FILENAME)
+        internalText = _jsonLib.getValue(variables,self._constants._FIELD_TEXT_FILENAME)
         
-        self._image.fixImage(pathImage,internalImage)
+        _image = image.Image(self._constants)
+        _image.fixImage(inputFile,internalImage)
+        if (_image):
+            del _image
 
-        self._ocr.readPhoto(internalImage,internalText,textTypeCodecs)
+        _ocr = ocr.Ocr(self._constants)
+        _ocr.readPhoto(internalImage,internalText,textTypeCodecs)
+        if (_ocr):
+            del _ocr
 
-        self._spellcheck.verifyFile(internalText,languageType,textType,textTypeCodecs)
+        _spellcheck = spellcheck.Spellcheck(self._constants)
+        _spellcheck.verifyFile(internalText,languageType,textType,textTypeCodecs)
+        if (_spellcheck):
+            del _spellcheck
 
-        ttsLanguage = self._jsonLib.getValue(languagePath,self._constants._FIELD_GTTS_CODE)
-        audioExists = self._tts.convertText(internalText,pathAudio,ttsLanguage)
+        ttsLanguage = _jsonLib.getValue(languagePath,self._constants._FIELD_GTTS_CODE)
+        _tts = tts.Tts(self._constants)
+        audioExists = _tts.convertText(internalText,outputFile,ttsLanguage)
+        if (_tts):
+            del _tts
 
         if (audioExists == self._constants._INDEX_RETURN_OK):
-            print(self._jsonLib.getValue(languagePath,self._constants._FIELD_MESSAGE_FINISH))
+            print(_jsonLib.getValue(languagePath,self._constants._FIELD_MESSAGE_FINISH))
         
-        self._functions.clearAll(internalImage,internalText)
-        
+        if (_jsonLib):
+            del _jsonLib
+
+        _functions = functions.Functions(self._constants)
+        _functions.clearAll(internalImage,internalText)
+         if (_functions):
+            del _functions
+  
         return self._constants._INDEX_RETURN_OK
 
 
     def __del__(self):
-        del self._constants
-        del self._functions
-        del self._image
-        del self._jsonLib
-        del self._ocr
-        del self._spellcheck
-        del self._tts
+        if (self._constants):
+            del self._constants
+        
                    
             
     
