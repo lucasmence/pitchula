@@ -13,8 +13,6 @@ The project has avaiable these four languages right now!
 
 ![ ](./data/image/flag-united-states-32-32.png) ![ ](./data/image/flag-spain-32-32.png) ![ ](./data/image/flag-brazil-32-32.png) ![ ](./data/image/flag-france-32-32.png)
 
-However, feel free to add another ones!
-
 # How to install
 
 - Clone the project directory using **git clone** command:
@@ -98,4 +96,4 @@ Output audio type suported: **MP3**
 
 #
 
-> Last update: January, 28 of 2019.
+> Last update: July, 22 of 2024.
